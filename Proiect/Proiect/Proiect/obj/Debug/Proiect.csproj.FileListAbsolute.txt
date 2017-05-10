@@ -64,3 +64,19 @@ C:\Users\gab\Desktop\New folder\pp\Proiect\Proiect\obj\Debug\Proiect.exe.manifes
 C:\Users\gab\Desktop\New folder\pp\Proiect\Proiect\obj\Debug\Proiect.application
 C:\Users\gab\Desktop\New folder\pp\Proiect\Proiect\obj\Debug\Proiect.exe
 C:\Users\gab\Desktop\New folder\pp\Proiect\Proiect\obj\Debug\Proiect.pdb
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.exe.config
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.exe.manifest
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.application
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.XML
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.exe
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.pdb
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.Form1.resources
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.Form2.resources
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.MetPuls.resources
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.Properties.Resources.resources
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.csproj.GenerateResource.Cache
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.TrustInfo.xml
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.exe.manifest
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.application
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.exe
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.pdb
