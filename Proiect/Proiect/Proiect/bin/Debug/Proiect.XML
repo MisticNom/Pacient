@@ -91,6 +91,11 @@
               Looks up a localized string similar to mihaibarbu.
             </summary>
         </member>
+        <member name="P:Proiect.Properties.Resources.error">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:Proiect.Properties.Resources.form2">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
@@ -114,6 +119,11 @@
         <member name="P:Proiect.Properties.Resources.Parola">
             <summary>
               Looks up a localized string similar to Is23ondatabase?.
+            </summary>
+        </member>
+        <member name="P:Proiect.Properties.Resources.success">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
     </members>

@@ -56,15 +56,39 @@ namespace Proiect
                     try
                     {
                         comanda.ExecuteNonQuery();
+                        // pentru forma 3
                         MetPuls MetPuls = new MetPuls();
                         MetPuls.label1.Text = textBoxNume.Text + " " + textBoxPrenume.Text;
-                        MetPuls.label2.Text = "Puls:"; 
-                        MetPuls.label6.Text= textBoxPuls.Text;
-                        MetPuls.label4.Text = "Tensiune:";
-                            MetPuls.label7.Text=textBoxTensiune.Text;
-                        MetPuls.label5.Text = "Varsta:";
-                        MetPuls.label8.Text= textBoxVarsta.Text;
+                        MetPuls.label2.Text = "Puls: "+textBoxPuls.Text+" Tensiune: "+textBoxTensiune.Text+" Varsta: "+textBoxVarsta.Text;
+                        int x = Convert.ToInt16(textBoxPuls.Text);
+                        int y = Convert.ToInt16(textBoxTensiune.Text);
+                        if ((x >= 40 && x <= 60) && (y >= 70 && y <= 90))
+                        {
+                            MetPuls.label3.Text = "Sub Tensiune";
+                            MetPuls.pictureBox1.Image = Properties.Resources.error;
+                        }
+                        if ((x >= 60 && x <= 80) && (y >= 90 && y <= 120))
+                        {
+                            MetPuls.label3.Text = "Tensiune normala";
+                            MetPuls.pictureBox1.Image = Properties.Resources.success;
+                        }
+                        if ((x >= 80 && x <= 90) && (y >= 120 && y <= 140))
+                        {
+                            MetPuls.label3.Text = "Testiune crescuta";
+                            MetPuls.pictureBox1.Image = Properties.Resources.error;
+                        }
+                        if (x >= 90 && y >= 140)
+                        {
+                            MetPuls.label3.Text = "Hipertensiune";
+                            MetPuls.pictureBox1.Image = Properties.Resources.error;
+                        }
+                        else
+                        {
+                            MetPuls.label3.Text = "Dead";
+                            MetPuls.pictureBox1.Image = Properties.Resources.error;
+                        }
                         MetPuls.Show();
+                        //sfarsit forma 3
                         resetbox();
                     }
                     catch
