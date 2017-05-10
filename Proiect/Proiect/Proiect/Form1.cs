@@ -82,11 +82,6 @@ namespace Proiect
                             MetPuls.label3.Text = "Hipertensiune";
                             MetPuls.pictureBox1.Image = Properties.Resources.error;
                         }
-                        else
-                        {
-                            MetPuls.label3.Text = "Dead";
-                            MetPuls.pictureBox1.Image = Properties.Resources.error;
-                        }
                         MetPuls.Show();
                         //sfarsit forma 3
                         resetbox();
