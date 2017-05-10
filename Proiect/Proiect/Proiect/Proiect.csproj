@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\mihai\Desktop\Repo\Pacient\Proiect\Proiect\publish\</PublishUrl>
+    <PublishUrl>E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <ProductName>Pacient</ProductName>
     <PublisherName>Grupa</PublisherName>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>2.0.2.%2a</ApplicationVersion>
+    <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -145,6 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pills-red-icon2.ico" />
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\success.png" />
     <None Include="Resources\form2.png" />
     <None Include="Resources\minus.png" />
     <None Include="Resources\addbutton.png" />
