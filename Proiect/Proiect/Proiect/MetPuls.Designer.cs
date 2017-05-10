@@ -51,7 +51,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(18, 88);
+            this.label2.Location = new System.Drawing.Point(18, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 32);
             this.label2.TabIndex = 1;
@@ -66,18 +66,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 40F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(12, 192);
+            this.label3.Location = new System.Drawing.Point(1, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(407, 72);
+            this.label3.Size = new System.Drawing.Size(430, 72);
             this.label3.TabIndex = 4;
-            this.label3.Text = ".............................";
+            this.label3.Text = "..............................";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(108, 297);
+            this.pictureBox1.Location = new System.Drawing.Point(125, 297);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
