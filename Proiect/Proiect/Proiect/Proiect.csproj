@@ -26,7 +26,7 @@
     <TargetCulture>ro</TargetCulture>
     <ProductName>Pacient</ProductName>
     <PublisherName>Grupa</PublisherName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>3.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

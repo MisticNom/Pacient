@@ -125,7 +125,14 @@ namespace Proiect
                 conect.Open();
                 SqlCommand comanda = conect.CreateCommand();
                 comanda.CommandType = CommandType.Text;
-                comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='"+nume+"' and lower(prenume)='"+prenume+ "') or (lower(nume)='"+nume+"') or (lower(prenume)='"+nume+"')";
+                if (ok == 1)
+                {
+                    comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='" + nume + "') or (lower(prenume)='" + nume + "')";
+                }
+                else
+                {
+                    comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='" + nume + "' and lower(prenume)='" + prenume + "')";//or (lower(nume)='" + nume + "') or (lower(prenume)='" + nume + "')";
+                }
                 try
                 {
                     comanda.ExecuteNonQuery();
