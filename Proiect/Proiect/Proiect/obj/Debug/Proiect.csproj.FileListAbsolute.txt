@@ -80,3 +80,4 @@ E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\bin\Debug\Proiect.
 E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.TrustInfo.xml
 E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.exe.manifest
 E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.application
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\Proiect\obj\Debug\Proiect.csprojResolveAssemblyReference.cache

@@ -34,6 +34,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Sfaturi = new System.Windows.Forms.Label();
+            this.sfat1 = new System.Windows.Forms.Label();
+            this.sfat2 = new System.Windows.Forms.Label();
+            this.sfat3 = new System.Windows.Forms.Label();
+            this.sfat4 = new System.Windows.Forms.Label();
+            this.sfat5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +72,7 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 40F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 32F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(1, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(430, 72);
@@ -76,12 +82,67 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(125, 297);
+            this.pictureBox1.Location = new System.Drawing.Point(121, 297);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // Sfaturi
+            // 
+            this.Sfaturi.AutoSize = true;
+            this.Sfaturi.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
+            this.Sfaturi.Location = new System.Drawing.Point(465, 178);
+            this.Sfaturi.Name = "Sfaturi";
+            this.Sfaturi.Size = new System.Drawing.Size(115, 41);
+            this.Sfaturi.TabIndex = 6;
+            this.Sfaturi.Text = "Sfaturi:";
+            // 
+            // sfat1
+            // 
+            this.sfat1.AutoSize = true;
+            this.sfat1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.sfat1.Location = new System.Drawing.Point(474, 245);
+            this.sfat1.Name = "sfat1";
+            this.sfat1.Size = new System.Drawing.Size(0, 28);
+            this.sfat1.TabIndex = 7;
+            // 
+            // sfat2
+            // 
+            this.sfat2.AutoSize = true;
+            this.sfat2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.sfat2.Location = new System.Drawing.Point(474, 293);
+            this.sfat2.Name = "sfat2";
+            this.sfat2.Size = new System.Drawing.Size(0, 28);
+            this.sfat2.TabIndex = 8;
+            // 
+            // sfat3
+            // 
+            this.sfat3.AutoSize = true;
+            this.sfat3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.sfat3.Location = new System.Drawing.Point(474, 341);
+            this.sfat3.Name = "sfat3";
+            this.sfat3.Size = new System.Drawing.Size(0, 28);
+            this.sfat3.TabIndex = 9;
+            // 
+            // sfat4
+            // 
+            this.sfat4.AutoSize = true;
+            this.sfat4.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.sfat4.Location = new System.Drawing.Point(474, 391);
+            this.sfat4.Name = "sfat4";
+            this.sfat4.Size = new System.Drawing.Size(0, 28);
+            this.sfat4.TabIndex = 10;
+            // 
+            // sfat5
+            // 
+            this.sfat5.AutoSize = true;
+            this.sfat5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
+            this.sfat5.Location = new System.Drawing.Point(474, 441);
+            this.sfat5.Name = "sfat5";
+            this.sfat5.Size = new System.Drawing.Size(0, 28);
+            this.sfat5.TabIndex = 11;
             // 
             // MetPuls
             // 
@@ -89,6 +150,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(884, 517);
+            this.Controls.Add(this.sfat5);
+            this.Controls.Add(this.sfat4);
+            this.Controls.Add(this.sfat3);
+            this.Controls.Add(this.sfat2);
+            this.Controls.Add(this.sfat1);
+            this.Controls.Add(this.Sfaturi);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -115,5 +182,11 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Sfaturi;
+        public System.Windows.Forms.Label sfat1;
+        public System.Windows.Forms.Label sfat2;
+        public System.Windows.Forms.Label sfat3;
+        public System.Windows.Forms.Label sfat4;
+        public System.Windows.Forms.Label sfat5;
     }
 }

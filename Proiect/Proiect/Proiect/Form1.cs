@@ -62,25 +62,45 @@ namespace Proiect
                         MetPuls.label2.Text = "Puls: "+textBoxPuls.Text+" Tensiune: "+textBoxTensiune.Text+" Varsta: "+textBoxVarsta.Text;
                         int x = Convert.ToInt16(textBoxPuls.Text);
                         int y = Convert.ToInt16(textBoxTensiune.Text);
-                        if ((x >= 40 && x <= 60) && (y >= 70 && y <= 90))
+                        if (x<=60 && (y >= 70 && y <=90))
                         {
                             MetPuls.label3.Text = "Sub Tensiune";
                             MetPuls.pictureBox1.Image = Properties.Resources.error;
+                            MetPuls.sfat1.Text = "Adaugarea de sare in alimentatie";
+                            MetPuls.sfat2.Text = "Consumul suficient de lichide";
+                            MetPuls.sfat3.Text = "Purtarea ciorapilor elastici medicinali";
+                            MetPuls.sfat4.Text ="Evitarea ridicarii bruste in picioare";
+                            MetPuls.sfat5.Text ="Mese bogate in cereale integrale";
                         }
-                        if ((x >= 60 && x <= 80) && (y >= 90 && y <= 120))
+                        if ((x>=61 && x<=80)&&(y >= 91 && y <= 120))
                         {
                             MetPuls.label3.Text = "Tensiune normala";
                             MetPuls.pictureBox1.Image = Properties.Resources.success;
+                            MetPuls.sfat1.Text = "Miscare moderata pe timpul zilei";
+                            MetPuls.sfat2.Text = "Adoptarea meselor sanatoase";
+                            MetPuls.sfat3.Text = "";
+                            MetPuls.sfat4.Text = "";
+                            MetPuls.sfat5.Text = "";
                         }
-                        if ((x >= 80 && x <= 90) && (y >= 120 && y <= 140))
+                        if ((x>=81 && x<=90)&&(y >= 121 && y <= 140))
                         {
-                            MetPuls.label3.Text = "Testiune crescuta";
+                            MetPuls.label3.Text = "Pre-hipertensiune";
                             MetPuls.pictureBox1.Image = Properties.Resources.error;
+                            MetPuls.sfat1.Text = "Miscare moderata pe timpul zilei";
+                            MetPuls.sfat2.Text = "Micsorarea cantitatii sodiului din alimentatie";
+                            MetPuls.sfat3.Text = "Mese bogate in legume si fructe";
+                            MetPuls.sfat4.Text = "Micsoratea consumului de alcool";
+                            MetPuls.sfat5.Text = "Micsorarea ingestiei de colesterol";
                         }
-                        if (x >= 90 && y >= 140)
+                        if (y >= 141)
                         {
                             MetPuls.label3.Text = "Hipertensiune";
                             MetPuls.pictureBox1.Image = Properties.Resources.error;
+                            MetPuls.sfat1.Text = "Miscarea pe timpul zilei";
+                            MetPuls.sfat2.Text = "Taierea sodiului din alimentatie";
+                            MetPuls.sfat3.Text = "Mese bogate in legume si fructe";
+                            MetPuls.sfat4.Text = "Oprirea consumului de alcool";
+                            MetPuls.sfat5.Text = "Oprirea consumului de tigari";
                         }
                         MetPuls.Show();
                         //sfarsit forma 3
