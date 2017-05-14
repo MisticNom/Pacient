@@ -59,7 +59,7 @@ namespace Proiect
                         // pentru forma 3
                         MetPuls MetPuls = new MetPuls();
                         MetPuls.label1.Text = textBoxNume.Text + " " + textBoxPrenume.Text;
-                        MetPuls.label2.Text = "Puls: "+textBoxPuls.Text+" Tensiune: "+textBoxTensiune.Text+" Varsta: "+textBoxVarsta.Text;
+                        MetPuls.label2.Text = "Puls: "+textBoxPuls.Text+"  Tensiune: "+textBoxTensiune.Text+"  Varsta: "+textBoxVarsta.Text;
                         int x = Convert.ToInt16(textBoxPuls.Text);
                         int y = Convert.ToInt16(textBoxTensiune.Text);
                         if (x<=60 && (y >= 70 && y <=90))
@@ -213,8 +213,10 @@ namespace Proiect
         // BUTON MENIU INSERARE ----------------------------------------------------
         private void pictureBoxInserare_Click(object sender, EventArgs e)
         {
+            butonInserare.TabStop = true;
             butonInserare.Visible = true;
             butonSterge.Visible=false;
+            butonSterge.TabStop = false;
 
             textBoxInfo.Show();
             textBoxPuls.Show();
@@ -230,8 +232,10 @@ namespace Proiect
         // BUTON MENIU STERGERE -------------------------------------------------------------------------------
         private void pictureBoxStergere_Click(object sender, EventArgs e)
         {
+            butonInserare.TabStop = false;
             butonInserare.Visible = false;
             butonSterge.Visible = true;
+            butonSterge.TabStop = true;
 
             textBoxInfo.Hide();
             textBoxPuls.Hide();

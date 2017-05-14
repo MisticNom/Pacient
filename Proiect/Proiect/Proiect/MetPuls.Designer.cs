@@ -46,10 +46,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 40F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 39F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(12, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 72);
+            this.label1.Size = new System.Drawing.Size(353, 70);
             this.label1.TabIndex = 0;
             this.label1.Text = "ghitamuresan";
             // 
@@ -57,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(18, 90);
+            this.label2.Location = new System.Drawing.Point(18, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 32);
             this.label2.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             this.Sfaturi.AutoSize = true;
             this.Sfaturi.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
-            this.Sfaturi.Location = new System.Drawing.Point(465, 178);
+            this.Sfaturi.Location = new System.Drawing.Point(465, 184);
             this.Sfaturi.Name = "Sfaturi";
             this.Sfaturi.Size = new System.Drawing.Size(115, 41);
             this.Sfaturi.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             this.sfat1.AutoSize = true;
             this.sfat1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.sfat1.Location = new System.Drawing.Point(474, 245);
+            this.sfat1.Location = new System.Drawing.Point(472, 251);
             this.sfat1.Name = "sfat1";
             this.sfat1.Size = new System.Drawing.Size(0, 28);
             this.sfat1.TabIndex = 7;
@@ -112,7 +112,7 @@
             // 
             this.sfat2.AutoSize = true;
             this.sfat2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.sfat2.Location = new System.Drawing.Point(474, 293);
+            this.sfat2.Location = new System.Drawing.Point(472, 299);
             this.sfat2.Name = "sfat2";
             this.sfat2.Size = new System.Drawing.Size(0, 28);
             this.sfat2.TabIndex = 8;
@@ -121,7 +121,7 @@
             // 
             this.sfat3.AutoSize = true;
             this.sfat3.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.sfat3.Location = new System.Drawing.Point(474, 341);
+            this.sfat3.Location = new System.Drawing.Point(472, 347);
             this.sfat3.Name = "sfat3";
             this.sfat3.Size = new System.Drawing.Size(0, 28);
             this.sfat3.TabIndex = 9;
@@ -130,7 +130,7 @@
             // 
             this.sfat4.AutoSize = true;
             this.sfat4.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.sfat4.Location = new System.Drawing.Point(474, 391);
+            this.sfat4.Location = new System.Drawing.Point(472, 397);
             this.sfat4.Name = "sfat4";
             this.sfat4.Size = new System.Drawing.Size(0, 28);
             this.sfat4.TabIndex = 10;
@@ -139,7 +139,7 @@
             // 
             this.sfat5.AutoSize = true;
             this.sfat5.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold);
-            this.sfat5.Location = new System.Drawing.Point(474, 441);
+            this.sfat5.Location = new System.Drawing.Point(472, 447);
             this.sfat5.Name = "sfat5";
             this.sfat5.Size = new System.Drawing.Size(0, 28);
             this.sfat5.TabIndex = 11;

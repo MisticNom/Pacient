@@ -285,7 +285,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(139, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(139, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(61, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -298,7 +298,7 @@
             this.pictureBoxIesire.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxIesire.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxIesire.Image = global::Proiect.Properties.Resources._24;
-            this.pictureBoxIesire.Location = new System.Drawing.Point(139, 259);
+            this.pictureBoxIesire.Location = new System.Drawing.Point(139, 258);
             this.pictureBoxIesire.Name = "pictureBoxIesire";
             this.pictureBoxIesire.Size = new System.Drawing.Size(61, 46);
             this.pictureBoxIesire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

@@ -98,7 +98,7 @@
             this.textBox1.Location = new System.Drawing.Point(12, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(426, 29);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 3;
             this.textBox1.Click += new System.EventHandler(this.TextInBox);
             this.textBox1.Enter += new System.EventHandler(this.TextInBox);
             this.textBox1.Leave += new System.EventHandler(this.TextOutBox);
@@ -110,7 +110,7 @@
             this.button3.Location = new System.Drawing.Point(444, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 30);
-            this.button3.TabIndex = 1;
+            this.button3.TabIndex = 0;
             this.button3.Text = "Cauta";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -122,7 +122,8 @@
             this.button2.Location = new System.Drawing.Point(885, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(91, 30);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 99;
+            this.button2.TabStop = false;
             this.button2.Text = "Inchide";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -134,7 +135,7 @@
             this.button1.Location = new System.Drawing.Point(791, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 30);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
