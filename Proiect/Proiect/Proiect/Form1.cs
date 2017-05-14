@@ -62,6 +62,12 @@ namespace Proiect
                         MetPuls.label2.Text = "Puls: "+textBoxPuls.Text+"  Tensiune: "+textBoxTensiune.Text+"  Varsta: "+textBoxVarsta.Text;
                         int x = Convert.ToInt16(textBoxPuls.Text);
                         int y = Convert.ToInt16(textBoxTensiune.Text);
+                        if(x<=60 && y <= 69)
+                        {
+                            MetPuls.label3.Text = "Eroare";
+                            MetPuls.pictureBox1.Image = Properties.Resources.error;
+                            MetPuls.sfat1.Text = "Valori prea mici";
+                        }
                         if (x<=60 && (y >= 70 && y <=90))
                         {
                             MetPuls.label3.Text = "Sub Tensiune";
@@ -135,7 +141,7 @@ namespace Proiect
                     conect.Open();
                     SqlCommand comanda = conect.CreateCommand();
                     comanda.CommandType = CommandType.Text;
-                    comanda.CommandText = "delete from dbo.pacienti where lower(nume)=lower('" + textBoxNume.Text + "') AND lower(prenume)=lower('" + textBoxPrenume.Text + "')";
+                    comanda.CommandText = "delete from dbo.pacienti where lower(nume)=lower('" + textBoxNume.Text + "') AND lower(prenume)=lower('" + textBoxPrenume.Text + "') AND lower(varsta)=lower('" + textBoxVarsta.Text + "')";
                     try
                     {
                         comanda.ExecuteNonQuery();
@@ -221,11 +227,9 @@ namespace Proiect
             textBoxInfo.Show();
             textBoxPuls.Show();
             textBoxTensiune.Show();
-            textBoxVarsta.Show();
 
             labelPuls.Show();
             labelTensiune.Show();
-            labelVarsta.Show();
             labelInfo.Show();
         }
 
@@ -240,11 +244,9 @@ namespace Proiect
             textBoxInfo.Hide();
             textBoxPuls.Hide();
             textBoxTensiune.Hide();
-            textBoxVarsta.Hide();
 
             labelPuls.Hide();
             labelTensiune.Hide();
-            labelVarsta.Hide();
             labelInfo.Hide();
         }
 

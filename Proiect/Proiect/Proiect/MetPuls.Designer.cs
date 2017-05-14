@@ -166,6 +166,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MetPuls";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MetPuls";
             this.Load += new System.EventHandler(this.MetPuls_Load);
