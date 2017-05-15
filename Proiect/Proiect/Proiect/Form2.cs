@@ -99,54 +99,57 @@ namespace Proiect
         //cautare dupa nume
         private void button3_Click(object sender, EventArgs e)
         {
-            string numefull = textBox1.Text;
-            string nume = null;
-            string prenume = null;
-            int ok = 1;
-            for(int i = 0; i < numefull.Length; i++)
+            if(textBox1.Text!=" " && textBox1.Text != "" && textBox1.Text != "Cautare dupa Nume")
             {
-                if (numefull[i] != ' ' && ok == 1) nume += Char.ToLower(numefull[i]);
-                else if(numefull[i] == ' ' && ok == 1)
+                string numefull = textBox1.Text;
+                string nume = null;
+                string prenume = null;
+                int ok = 1;
+                for (int i = 0; i < numefull.Length; i++)
                 {
-                    ok = 0;
+                    if (numefull[i] != ' ' && ok == 1) nume += Char.ToLower(numefull[i]);
+                    else if (numefull[i] == ' ' && ok == 1)
+                    {
+                        ok = 0;
+                    }
+                    else if (ok == 0)
+                    {
+                        prenume += Char.ToLower(numefull[i]);
+                    }
                 }
-                else if (ok == 0)
+                if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
-                    prenume += Char.ToLower(numefull[i]);
-                }
-            }
-            if (NetworkInterface.GetIsNetworkAvailable() == false)
-            {
-                MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-            else
-            {
-                conect.Open();
-                SqlCommand comanda = conect.CreateCommand();
-                comanda.CommandType = CommandType.Text;
-                if (ok == 1)
-                {
-                    comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='" + nume + "') or (lower(prenume)='" + nume + "')";
+                    MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
                 }
                 else
                 {
-                    comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='" + nume + "' and lower(prenume)='" + prenume + "')";//or (lower(nume)='" + nume + "') or (lower(prenume)='" + nume + "')";
+                    conect.Open();
+                    SqlCommand comanda = conect.CreateCommand();
+                    comanda.CommandType = CommandType.Text;
+                    if (ok == 1)
+                    {
+                        comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='" + nume + "') or (lower(prenume)='" + nume + "')";
+                    }
+                    else
+                    {
+                        comanda.CommandText = "select * from dbo.pacienti where (lower(nume)='" + nume + "' and lower(prenume)='" + prenume + "')";//or (lower(nume)='" + nume + "') or (lower(prenume)='" + nume + "')";
+                    }
+                    try
+                    {
+                        comanda.ExecuteNonQuery();
+                    }
+                    catch (Exception p)
+                    {
+                        MessageBox.Show(p.ToString(), "Eroare");
+                    }
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(comanda);
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conect.Close();
                 }
-                try
-                {
-                    comanda.ExecuteNonQuery();
-                }
-                catch (Exception p)
-                {
-                    MessageBox.Show(p.ToString(), "Eroare");
-                }
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(comanda);
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                conect.Close();
-            }          
+            }
         }
     }
 }
