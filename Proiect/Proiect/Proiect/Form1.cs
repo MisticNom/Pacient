@@ -215,6 +215,7 @@ namespace Proiect
         private void pictureBoxIesire_Click(object sender, EventArgs e)
         {
             Close();
+            
         }
         // BUTON MENIU INSERARE ----------------------------------------------------
         private void pictureBoxInserare_Click(object sender, EventArgs e)
@@ -288,6 +289,11 @@ namespace Proiect
                     }
                     break;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
