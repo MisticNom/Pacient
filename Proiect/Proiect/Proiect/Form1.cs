@@ -20,6 +20,7 @@ namespace Proiect
 
         SqlConnection conect = new SqlConnection(@"Data Source=pacienti.database.windows.net;Initial Catalog=database;Integrated Security=False;User ID=" + Properties.Resources.Cont.ToString() + ";Password=" + Properties.Resources.Parola.ToString() + ";Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         int x = 0;
+        string user = FormaLogare.admin;
         // -------------------- FUNCTIE RESET TEXT BOX  --------------------------------------------------------------------------------------------------
 
         private void resetbox()
@@ -173,7 +174,14 @@ namespace Proiect
             label1.ForeColor= System.Drawing.ColorTranslator.FromHtml("#F7F5E6"); 
             label2.ForeColor= System.Drawing.ColorTranslator.FromHtml("#F7F5E6"); 
             label3.ForeColor= System.Drawing.ColorTranslator.FromHtml("#F7F5E6");
-            label4.ForeColor= System.Drawing.ColorTranslator.FromHtml("#F7F5E6"); 
+            label4.ForeColor= System.Drawing.ColorTranslator.FromHtml("#F7F5E6");
+            if (user == "0")
+            {
+                pictureBoxAfisare.Hide();
+                pictureBoxStergere.Hide();
+                label2.Hide();
+                label3.Hide();
+            }
         }
 
         // ANIMATII MENIU ------------------------------------------------------------------------

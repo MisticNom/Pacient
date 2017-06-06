@@ -15,7 +15,7 @@ namespace Proiect
 
     public partial class FormaLogare : Form
     {
-        string admin;
+        public static string admin;
         SqlConnection conect = new SqlConnection(@"Data Source=pacienti.database.windows.net;Initial Catalog=database;Integrated Security=False;User ID=" + Properties.Resources.Cont.ToString() + ";Password=" + Properties.Resources.Parola.ToString() + ";Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         public FormaLogare()
@@ -26,6 +26,11 @@ namespace Proiect
         private void FormaLogare_Load(object sender, EventArgs e)
         {
             BackColor = System.Drawing.ColorTranslator.FromHtml("#F7F5E6");
+            panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#424b70");
+            label1.BackColor = System.Drawing.ColorTranslator.FromHtml("#424b70");
+            label1.ForeColor = System.Drawing.ColorTranslator.FromHtml("#F7F5E6");
+            linkLabel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#424b70");
+            linkLabel1.LinkColor = System.Drawing.ColorTranslator.FromHtml("#F7F5E6");
             button3.Hide();
         }
 
@@ -36,71 +41,86 @@ namespace Proiect
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (NetworkInterface.GetIsNetworkAvailable() == false)
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox1.Text != " " || textBox2.Text != " ")
             {
-                MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                string parola = textBox2.Text;
-                try
+                if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
-                    SqlCommand comanda = new SqlCommand("select parola from dbo.useri where nume ='" + textBox1.Text + "'", new SqlConnection(conect.ConnectionString));
-                    comanda.Connection.Open();
-                    if (parola == comanda.ExecuteScalar().ToString())
+                    MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
+                else
+                {
+                    string parola = textBox2.Text;
+                    try
                     {
-                        SqlCommand comanda2 = new SqlCommand("select admin from dbo.useri where nume ='" + textBox1.Text + "'", new SqlConnection(conect.ConnectionString));
-                        comanda2.Connection.Open();
-                        admin = comanda2.ExecuteScalar().ToString();
-                        comanda2.Connection.Close();
-                        MessageBox.Show(admin.ToString(), "sad");
+                        SqlCommand comanda = new SqlCommand("select parola from dbo.useri where nume ='" + textBox1.Text + "'", new SqlConnection(conect.ConnectionString));
+                        comanda.Connection.Open();
+                        if (parola == comanda.ExecuteScalar().ToString())
+                        {
+                            SqlCommand comanda2 = new SqlCommand("select admin from dbo.useri where nume ='" + textBox1.Text + "'", new SqlConnection(conect.ConnectionString));
+                            comanda2.Connection.Open();
+                            admin = comanda2.ExecuteScalar().ToString();
+                            comanda2.Connection.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        comanda.Connection.Close();
+                        Form1 formaintrare = new Form1();
+                        formaintrare.Show();
                     }
-                    else
+                    catch (Exception x)
                     {
                         MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    comanda.Connection.Close();
                 }
-                catch (Exception x)
-                {
-                    MessageBox.Show(x.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                refreshtext();
             }
-            refreshtext();
 
-            Form1 formaintrare = new Form1();
-            formaintrare.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (NetworkInterface.GetIsNetworkAvailable() == false)
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox1.Text != " " || textBox2.Text != " ")
             {
-                MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                try
+                if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
-                    SqlCommand comanda = new SqlCommand("insert into dbo.useri values('" + textBox1.Text + "','" + textBox2.Text + "', '0')", new SqlConnection(conect.ConnectionString));
-                    comanda.Connection.Open();
-                    comanda.ExecuteNonQuery();
-                    MessageBox.Show("Cont Introdus !", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    comanda.Connection.Close();
+                    MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                catch (Exception x)
+                else
                 {
-                    MessageBox.Show(x.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        SqlCommand comanda = new SqlCommand("insert into dbo.useri values('" + textBox1.Text + "','" + textBox2.Text + "', '0')", new SqlConnection(conect.ConnectionString));
+                        comanda.Connection.Open();
+                        comanda.ExecuteNonQuery();
+                        MessageBox.Show("Cont Introdus !", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        comanda.Connection.Close();
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show(x.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    button2.Show();
+                    button3.Hide();
+                    linkLabel1.Show();
+                    refreshtext();
                 }
-                button2.Show();
-                button3.Hide();
-                refreshtext();
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            linkLabel1.Hide();
             button3.Show();
             button2.Hide();
             refreshtext();
