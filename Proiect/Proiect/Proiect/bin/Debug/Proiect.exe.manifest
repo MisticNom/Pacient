@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proiect.exe" size="309672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proiect.exe" size="311720">
       <assemblyIdentity name="Proiect" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>go2jho4UTlxxz22QQlU14CTg1D6Us99T7ABrSWmuuo4=</dsig:DigestValue>
+        <dsig:DigestValue>EJ9TWq7PVV0X31R2pXQ9pcdzUdNbfXMeS89jAt9jJZg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
