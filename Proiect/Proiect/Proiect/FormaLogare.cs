@@ -15,7 +15,8 @@ namespace Proiect
 
     public partial class FormaLogare : Form
     {
-        public static string admin;
+        public static Form1 formaintrare = null;
+        public static string admin="0";
         SqlConnection conect = new SqlConnection(@"Data Source=pacienti.database.windows.net;Initial Catalog=database;Integrated Security=False;User ID=" + Properties.Resources.Cont.ToString() + ";Password=" + Properties.Resources.Parola.ToString() + ";Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         public FormaLogare()
@@ -34,23 +35,24 @@ namespace Proiect
             button3.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox1.Text != " " || textBox2.Text != " ")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox1.Text == " " || textBox2.Text == " ")
             {
                 MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ArgumentException("Exceptie Date Gresite");
             }
             else
             {
                 if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
                     MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Close();
+                    throw new ArgumentException("Exceptie Internet");
                 }
                 else
                 {
@@ -69,38 +71,41 @@ namespace Proiect
                         else
                         {
                             MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            throw new ArgumentException("Exceptie Date Introduse Gresite");
                         }
                         comanda.Connection.Close();
-                        Form1 formaintrare = new Form1();
+                        formaintrare = new Form1();
                         formaintrare.Show();
                     }
                     catch (Exception x)
                     {
                         MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new ArgumentException("Exceptie Date Gresite");
                     }
                 }
                 refreshtext();
             }
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox1.Text != " " || textBox2.Text != " ")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox1.Text == " " || textBox2.Text == " ")
             {
                 MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ArgumentException("Exceptie Date Gresite");
             }
             else
             {
                 if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
                     MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new ArgumentException("Exceptie Internet");
                 }
                 else
                 {
                     try
                     {
-                        SqlCommand comanda = new SqlCommand("insert into dbo.useri values('" + textBox1.Text + "','" + textBox2.Text + "', '0')", new SqlConnection(conect.ConnectionString));
+                        SqlCommand comanda = new SqlCommand("insert into dbo.useri values('" + textBox1.Text + "','" + textBox2.Text + "', '"+admin+"')", new SqlConnection(conect.ConnectionString));
                         comanda.Connection.Open();
                         comanda.ExecuteNonQuery();
                         MessageBox.Show("Cont Introdus !", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,6 +114,7 @@ namespace Proiect
                     catch (Exception x)
                     {
                         MessageBox.Show(x.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new ArgumentException("Exceptie");
                     }
                     button2.Show();
                     button3.Hide();
@@ -118,7 +124,7 @@ namespace Proiect
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLabel1.Hide();
             button3.Show();
@@ -130,6 +136,12 @@ namespace Proiect
         {
             textBox1.Text = null;
             textBox2.Text = null;
+        }
+
+        public void label1_DoubleClick(object sender, EventArgs e)
+        {
+            if (admin == "0") admin = "1";
+            else admin = "0";
         }
     }
 }

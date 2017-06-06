@@ -43,11 +43,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 30F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(123, 25);
+            this.label1.Location = new System.Drawing.Point(122, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 54);
             this.label1.TabIndex = 999;
             this.label1.Text = "Pacient";
+            this.label1.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
             // 
             // textBox1
             // 
@@ -147,12 +148,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button button3;
     }
 }

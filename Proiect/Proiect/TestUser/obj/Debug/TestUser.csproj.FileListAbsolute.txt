@@ -1,0 +1,16 @@
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\TestUser.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\TestUser.pdb
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Proiect.exe
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Proiect.pdb
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Proiect.xml
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Proiect.exe.config
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\obj\Debug\TestUser.csprojResolveAssemblyReference.cache
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\obj\Debug\TestUser.dll
+E:\Visual Studio Projects\Git\Proiect\Proiect\Proiect\TestUser\obj\Debug\TestUser.pdb

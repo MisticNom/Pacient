@@ -415,21 +415,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button butonInserare;
-        private System.Windows.Forms.TextBox textBoxNume;
-        private System.Windows.Forms.TextBox textBoxPrenume;
-        private System.Windows.Forms.TextBox textBoxPuls;
-        private System.Windows.Forms.TextBox textBoxTensiune;
         private System.Windows.Forms.Label labelNume;
         private System.Windows.Forms.Label labelPrenume;
         private System.Windows.Forms.Label labelPuls;
         private System.Windows.Forms.Label labelTensiune;
-        private System.Windows.Forms.Button butonSterge;
         private System.Windows.Forms.Label labelInfo;
-        private System.Windows.Forms.TextBox textBoxInfo;
         private System.Windows.Forms.Label labelVarsta;
-        private System.Windows.Forms.TextBox textBoxVarsta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxIesire;
         private System.Windows.Forms.PictureBox pictureBoxAfisare;
@@ -442,6 +433,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button butonInserare;
+        public System.Windows.Forms.TextBox textBoxNume;
+        public System.Windows.Forms.TextBox textBoxPrenume;
+        public System.Windows.Forms.TextBox textBoxPuls;
+        public System.Windows.Forms.TextBox textBoxTensiune;
+        public System.Windows.Forms.Button butonSterge;
+        public System.Windows.Forms.TextBox textBoxInfo;
+        public System.Windows.Forms.TextBox textBoxVarsta;
     }
 }
 

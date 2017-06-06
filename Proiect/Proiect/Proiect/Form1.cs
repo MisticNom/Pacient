@@ -40,13 +40,14 @@ namespace Proiect
 
         //-----------------------  ADAUGA PACIENT   ----------------------------------------------------------------------------
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             if (textBoxNume.Text != "" && textBoxPrenume.Text != "" && textBoxPuls.Text != "" && textBoxTensiune.Text != "" && textBoxVarsta.Text != "")
             {
                 if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
                     MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new ArgumentException("Exceptie Internet");
                 }
                 else
                 {
@@ -116,6 +117,7 @@ namespace Proiect
                     catch
                     {
                         MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new ArgumentException("Exceptie Date Gresite");
                     }
                     conect.Close();
                 }
@@ -123,19 +125,21 @@ namespace Proiect
             else
             {
                 MessageBox.Show("Date introduse gresit !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ArgumentException("Exceptie Date introduse gresit");
             }
         }
 
 
         //---------------------- STERGE PACIENT --------------------------------------------------------------------------------------------------
 
-        private void button4_Click(object sender, EventArgs e)
+        public void button4_Click(object sender, EventArgs e)
         {
             if (textBoxNume.Text != "" && textBoxPrenume.Text != "")
             {
                 if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
                     MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new ArgumentException("Exceptie Internet");
                 }
                 else
                 {
@@ -152,6 +156,7 @@ namespace Proiect
                     catch
                     {
                         MessageBox.Show("Eroare !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new ArgumentException("Eroare Stergere");
                     }
                     conect.Close();
                 }
@@ -159,13 +164,14 @@ namespace Proiect
             else
             {
                 MessageBox.Show("Eroare Nume Pacient !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new ArgumentException("Eroare Nume Pacient");
             }
         }
 
 
         //----------------------  FORM LOAD    --------------------------------------------------------------------------------------------------------
         // + + CULORI
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             butonSterge.Visible = false;
             this.BackColor = System.Drawing.ColorTranslator.FromHtml("#EFEFEF");

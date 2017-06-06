@@ -58,7 +58,7 @@ namespace Proiect
 
         //----------------------- FORM 2 LOAD   -----------------------------------------------------------------------------------------------------
         //++ CULORI
-        private void Form2_Load(object sender, EventArgs e)
+        public void Form2_Load(object sender, EventArgs e)
         {
             panel1.BackColor= panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#424b70");
             dataGridView1.BackgroundColor=System.Drawing.ColorTranslator.FromHtml("#F7F5E6");
@@ -97,7 +97,7 @@ namespace Proiect
         }
 
         //cautare dupa nume
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
             if(textBox1.Text!=" " && textBox1.Text != "" && textBox1.Text != "Cautare dupa Nume")
             {
@@ -120,7 +120,7 @@ namespace Proiect
                 if (NetworkInterface.GetIsNetworkAvailable() == false)
                 {
                     MessageBox.Show("Lipsa internet !", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Close();
+                    throw new ArgumentException("Eroare Iternet");
                 }
                 else
                 {
